@@ -109,7 +109,7 @@ if __name__ == '__main__':
                 model.save_networks(save_suffix)
 
             for i in opt.gpu_ids:
-                with torch.cuda.device('cuda:%f' % (i)):
+                with torch.cuda.device('cuda:%i' % (i)):
                     torch.cuda.empty_cache()
 
             iter_data_time = time.time()
