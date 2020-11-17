@@ -13,7 +13,6 @@ from torch.nn.utils import clip_grad_norm_
 import random
 import unicodedata
 import sys
-import easyocr
 
 activation_dict = {'inplace_relu': nn.ReLU(inplace=True),
                    'relu': nn.ReLU(inplace=False),
