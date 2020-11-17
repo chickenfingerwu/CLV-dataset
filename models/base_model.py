@@ -158,7 +158,7 @@ class BaseModel(ABC):
                 save_path = F"/content/gdrive/My Drive/Scrabble_checkpoints%s" % save_filename
                 net = getattr(self, 'net' + name)
 
-            if len(self.gpu_ids) > 0 and torch.cuda.is_available():
+                if len(self.gpu_ids) > 0 and torch.cuda.is_available():
                     # torch.save(net.module.cpu().state_dict(), save_path)
                     if len(self.gpu_ids) > 1:
                         torch.save(net.module.cpu().state_dict(), save_path)
