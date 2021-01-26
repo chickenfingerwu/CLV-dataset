@@ -339,10 +339,11 @@ if __name__ == '__main__':
     # char - resize so that each character's width will be in a specific range (inside this range the width will be chosen randomly),
     # keepRatio - resize to a specific image height while keeping the height-width aspect-ratio the same.
     # noResize - do not resize the image
-    imgH = 32 # height of the resized image
+
+    imgH = 128 # height of the resized image
     init_gap = 0  # insert a gap before the beginning of the text with this number of pixels
-    charmaxW = 17  # The maximum character width
-    charminW = 16  # The minimum character width
+    charmaxW = 65  # The maximum character width
+    charminW = 64  # The minimum character width
     h_gap = 0  # Insert a gap below and above the text
     discard_wide = True  # Discard images which have a character width 3 times larger than the maximum allowed character size (instead of resizing them) - this helps discard outlier images
     discard_narr = True  # Discard images which have a character width 3 times smaller than the minimum allowed charcter size.
