@@ -90,14 +90,15 @@ def create_img_label_list(top_dir, dataset, mode, words, author_number, remove_p
     image_path_list, label_list = [], []
     author_id = 'None'
     if dataset == 'ETL_test':
-        images_name = '0x59be'
+        images_name = ['0x30a2', '0x30a4', '0x59be']
         idx = 1
-        images_dir = os.path.join(root_dir, images_name)
-        for path, subdir, files in os.walk(images_dir):
-            for name in files:
-                image_path_list.append(images_dir + '/' + name)
+        for dir_name in images_name:
+            images_dir = os.path.join(root_dir, dir_name)
+            for path, subdir, files in os.walk(images_dir):
+                for name in files:
+                    image_path_list.append(images_dir + '/' + name)
         output_dir = 'Datasets/ETL_test'
-        label_list.append('妾')
+        label_list = ['ア', 'イ', '妾']
     elif dataset == 'CVL':
         root_dir = os.path.join(root_dir, 'cvl-database-1-1')
         if words:
