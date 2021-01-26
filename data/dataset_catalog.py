@@ -13,7 +13,7 @@ datasets = {"RIMEScharH32W16": _DATA_ROOT+'RIMES/h32char16to17/tr',
             "CVLcharH32W16": _DATA_ROOT+'CVL/h32char16to17/tr',
             "CVLtrH32": _DATA_ROOT+'CVL/h32/train_new_partition',
             "CVLteH32": _DATA_ROOT+'CVL/h32/test_unlabeled',
-            "ETL_testcharH128W64": _DATA_ROOT+'ETL_test/h128char64to65/tr'
+            "ETL_testcharH32W16": _DATA_ROOT+'ETL_test/h32char16to17/tr'
             }
 
 alphabet_dict = {'IAM': 'alphabetEnglish',
